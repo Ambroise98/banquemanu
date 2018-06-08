@@ -1,67 +1,82 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<header class="main-header">
+<nav class="navbar navbar-static-top">
 
-<div class="header"style="background-color: #2e8b57;">
-   <div class="container">
-      <div class="row" >
-         <div class="col-md-5">
-            <!-- Logo -->
-            <div class="logo">
-               <h1><a href="index.html"><i class="glyphicon glyphicon-leaf"></i>  Leaf Bank</a></h1>
-            </div>
-         </div>
-         <div class="col-md-5">
-            <div class="row">
-              <div class="col-lg-12">
-                <button class="btn btn-default btn-lg"><a routerLink="/retrait" >Retrait a la caisse</a></button>
-                <button class="btn btn-default btn-lg"><a routerLink="/versement" >Versement</a></button>
-                <button class="btn btn-default btn-lg"><a routerLink="/virement" >Virement</a></button>
+            <div class="navbar-top">
+
+              <div class="container">
+                  <div class="row">
+
+                    <div class="col-sm-6 col-xs-12">
+
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a routerlink="tel:">+228 93 25 42 84 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a routerlink="mailto:limema2012@gmail.com">limema2012@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right">
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a routerlink="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a routerlink="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a routerlink="#"> <i class="fa fa-google"></i>  </a> </li>
+                            <li> <a routerlink="#"> <i class="fa fa-youtube"></i>  </a> </li>
+                            <li> <a routerlink="#"> <i class="fa fa fa-pinterest-p"></i>  </a> </li>
+                       </ul> <!-- /.header-social  -->
+
+                    </div>
+
+
+                  </div>
               </div>
-            </div>
-         </div>
-         <div class="col-md-2">
-            <div class="navbar navbar-inverse" role="banner">
-                <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
-                  <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                      <a routerLink="/compte" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i>Compte<b class="caret"></b></a>
+        </div>
 
-                    </li>
+            <div class="navbar-main">
 
-                  </ul>
-                </nav>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-      <div class="page-content">
-      	<div class="row">
-  		  <div class="col-md-2">
-  		  	<div class="sidebar content-box" style="display: block;">
-                  <ul class="nav">
-                      <!-- Main menu -->
-                      <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Acceuil</a></li>
-                      <li><a routerLink="/test"><i class="glyphicon glyphicon-send"></i> Ecrire un Email</a></li>
-                      <li><a routerLink="/inbox"><i class="glyphicon glyphicon-envelope"></i> Boite de Reception</a></li>
-                      <li><a routerLink="/corbeille"><i class="glyphicon glyphicon-trash"></i> Corbeille</a></li>
-                        <li><a routerLink="/spam"><i class="glyphicon glyphicon-warning-sign"></i> Spam</a></li>
-                      <li><a routerLink="/gestionclient" ><i class="glyphicon glyphicon-import"></i> Gestion des Requetes</a></li>
-                        <li><a routerLink="/inscription" ><i class="glyphicon glyphicon-user"></i><i class="glyphicon glyphicon-indent-left">
-                        </i>Creer un compte Leaf Bank</a></li>
-                        <li><a routerLink="/gestionemploye" ><i class="glyphicon glyphicon-user"></i><i class="glyphicon glyphicon-indent-left">
-                        </i> Gestion des Utilisateurs</a></li>
-                      <li><a routerLink="/testacc"><i class="glyphicon glyphicon-stats"></i> Les Statistiques</a></li>
-                      <li><a routerLink="/trans"><i class="glyphicon glyphicon-list"></i> Liste des transations</a></li>
+              <div class="container">
 
-                      </ul>
-               </div>
-  		  </div>
-        <div class="col-md-10">
-          <div class="row">
-                      <router-outlet> </router-outlet>	<br /><br />
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                  </button>
+
+                  <a class="navbar-brand" routerlink="index.html">BM</a>
+
                 </div>
 
-  		</div>
-      </div>
+                <div id="navbar" class="navbar-collapse collapse pull-right">
 
-</div>
+                  <ul class="nav navbar-nav">
+
+                    <li><a href="/">ACCUEIL</a></li>
+                    <li><a  routerLink="/employes">EMPLOYES</a></li>
+
+
+
+                         <li class="submenu-item"><a routerLink="/liste">Liste Opérations </a></li>
+                         <li class="submenu-item"><a routerLink="/versement">Versement </a></li>
+                         <li class="submenu-item"><a routerLink="/retrait">Retrait </a></li>
+                         <li class="submenu-item"><a routerLink="/virement">Virement</a></li>
+
+
+
+                    <li><a routerLink="/comptes">COMPTES</a></li>
+                    <li><a routerLink="/login">LOGIN</a></li>
+
+                  </ul>
+
+                </div> <!-- /#navbar -->
+
+              </div> <!-- /.container -->
+
+            </div> <!-- /.navbar-main -->
+          </nav>
+    </header>
+    <router-outlet></router-outlet>

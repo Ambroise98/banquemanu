@@ -1,0 +1,125 @@
+<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+
+			<h1 class="page-title">EMPLOYES <span class="title-under"></span></h1>
+			<p class="page-description">
+				Soyez un pauvre qui a de l'argent, BM la banque qui vous rend riche.
+			</p>
+			</div>
+	</div>
+	<div class="page-content">
+    	<div class="row">
+
+
+		<div class="col-md-10">
+
+  			<div class="row">
+  				<div class="col-md-6">
+  					<div class="content-box-large">
+		  				<div class="panel-heading">
+							<div class="panel-title">Liste du personnel</div>
+
+
+						</div>
+						<div class="panel-body">
+          <table class="table">
+            <thead>
+            <tr>
+              <th><i>Code</i></th>
+              <th><i>Nom</i></th>
+              <th><i>Prenom</i></th>
+              <th><i>Groupe</i></th>
+              <th><i>Status</i></th>
+              <th><i>Modifier</i></th>
+              <th><i>Supprimer</i></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let employe of employes | async">
+              <td>{{employe.code}}</td>
+              <td>{{employe.nom}}</td>
+              <td>{{employe.prenom}}</td>
+              <td>{{employe.groupe}}</td>
+              <td>{{employe.status}}</td>
+              <td><button class="btn btn-primary" ><i class="glyphicon glyphicon-pencil"></i></button></td>
+              <td><button type="button" class="btn btn-danger dropdown-toggle" (click) = "supprimerEmployer(employe._id)" ><span class="glyphicon glyphicon-remove"></span></button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+		  			</div>
+  				</div>
+
+
+				<div class="row">
+	  				<div class="col-md-6">
+	  					<div class="content-box-large">
+			  				<div class="panel-heading">
+					            <div class="panel-title">Ajouter du personnel</div>
+
+
+					        </div>
+									<div class="panel-body">
+	          <form class="form-horizontal" role="form">
+	            <div class="form-group" >
+	              <label  class="col-sm-2 control-label"><i>Nom:</i></label>
+	              <div class="col-sm-10">
+	                <input class="form-control" id="inputEmail3" placeholder="Nom" type="text" name="nom" [(ngModel)]="nom">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label  class="col-sm-2 control-label"><i>Prenoms:</i></label>
+	              <div class="col-sm-10">
+	                <input class="form-control" id="inputEmail3" placeholder="Prenoms" type="text" name="prenoms" [(ngModel)]="prenoms">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label class="col-sm-2 control-label"><i>Groupe:</i></label>
+	              <div class="col-sm-10">
+	                <input class="form-control" id="inputEmail3" placeholder="Groupe " type="text" name="groupe" [(ngModel)]="groupe">
+	              </div>
+	            </div>
+
+	            <!--div class="form-group">
+	                           <label  class="col-sm-2 control-label">Mot de passe *</label>
+	                           <div class="col-sm-10">
+	                             <input class="form-control" id="inputPassword3" placeholder="Password" type="password" name="password">
+	                           </div>
+	                         </div>
+	         <div class="form-group">
+	           <label  class="col-sm-2 control-label">Confirmez Mot de passe *</label>
+	           <div class="col-sm-10">
+	             <input class="form-control" id="inputPassword3" placeholder="Password" type="password" name="passwordconf">
+	           </div>
+	         </div-->
+
+	            <div class="form-group">
+	              <label  class="col-sm-2 control-label"><i>Status:</i></label>
+	              <div class="col-sm-10">
+	                <input class="form-control" id="inputEmail3" placeholder="status" type="text" name="status" [(ngModel)]="status">
+	              </div>
+	            </div>
+	            <div class="form-group">
+	              <label  class="col-sm-2 control-label"><i>Code:</i></label>
+	              <div class="col-sm-10">
+	                <input class="form-control" id="inputEmail3" placeholder="Code" type="text" name="code" [(ngModel)]="code">
+	              </div>
+	            </div>
+	            <br/>
+	            <div class="form-group">
+	              <div class="col-sm-offset-2 col-sm-10">
+	                <button (click)="ajouterEmployer(code, nom, prenoms, groupe, status)" type="submit" class="btn btn-primary">Valider</button>
+	              </div>
+	            </div>
+	          </form>
+	        </div>
+			  			</div>
+	  				</div>
+
+
+		  </div>
+		</div>
+    </div>
+</div>
+</div>

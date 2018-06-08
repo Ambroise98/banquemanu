@@ -1,0 +1,127 @@
+<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+
+			<h1 class="page-title">COMPTES <span class="title-under"></span></h1>
+			<p class="page-description">
+				Soyez un pauvre qui a de l'argent, BM la banque qui vous rend riche.
+			</p>
+
+		</div>
+
+	</div>
+
+	<div class="page-content">
+    	<div class="row">
+
+
+		<div class="col-md-10">
+
+		<div class="col-md-6">
+
+
+<div class="content-box-large" >
+<div class="panel-heading">
+<div class="panel-title"><h1><i>Gestion Compte</i></h1></div>
+</div>
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label  class="col-sm-2 control-label"><i>Numero*:</i></label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="inputEmail8" placeholder="Numero" name="numero" [(ngModel)]="numero">
+		</div>
+	</div>
+<div class="form-group">
+
+	<label  class="col-sm-2 control-label"><i>Nom*:</i></label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="inputEmail87" placeholder="Nom" name="nom" [(ngModel)]="nom">
+	</div>
+</div>
+<div class="form-group">
+	<label  class="col-sm-2 control-label"><i>Prenom*:</i></label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="inputEmail88" placeholder="Prenom" name="prenom" [(ngModel)]="prenom">
+	</div>
+</div>
+
+<div class="form-group">
+	<label  class="col-sm-2 control-label"><i>Date*:</i></label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="inputEmail7" placeholder="Date" name="date" [(ngModel)]="date">
+	</div>
+</div>
+
+<div class="form-group">
+
+	<label  class="col-sm-2 control-label"><i>Type*:</i></label>
+	<div class="col-sm-10">
+		<input type="text" class="form-control" id="inputEmail7898" placeholder="type" name="type" [(ngModel)]="type">
+	</div>
+</div>
+
+<div class="form-group">
+
+	<label  class="col-sm-2 control-label"><i>Solde*:</i></label>
+	<div class="col-sm-10">
+
+		<input type="text" class="form-control" id="inputEmail12" placeholder="solde($)" name="solde" [(ngModel)]="solde">
+	</div>
+</div>
+
+
+<div class="form-group">
+	<div class="col-sm-offset-2 col-sm-10">
+		<button (click)="ajouterClient( numero, nom, prenom, date, type, solde)" type="submit" class="btn btn-primary">Valider</button>
+	</div>
+</div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+	<div class="content-box-large">
+		<div class="panel-heading">
+			<div class="panel-title"><h1><i>Liste des comptes</i></h1></div>
+		</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+				<tr>
+					<th><i>Numero</i></th>
+					<th><i>Nom</i></th>
+					<th><i>Prenom</i></th>
+					<th><i>Date</i></th>
+					<th><i>Type</i></th>
+					<th><i>Solde</i></th>
+
+					<th><i>Supprimer</i></th>
+					<th><i>Versement</i></th>
+					<th><i>Retrait</i></th>
+					<th><i>Virement</i></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr *ngFor="let client of clients | async">
+					<td>{{client.numero}}</td>
+					<td>{{client.nom}}</td>
+					<td>{{client.prenom}}</td>
+					<td>{{client.date}}</td>
+					<td>{{client.type}}</td>
+					<td>{{client.solde}}</td>
+
+					<td><button type="button" class="btn btn-danger dropdown-toggle" (click)= "supprimerClient(client._id)"><span class="glyphicon glyphicon-remove"></span></button></td>
+					<td><a routerLink="/versement" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a></td>
+					<td><a routerLink="/retrait" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a></td>
+					<td><a routerLink="/virement" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i></a></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+
+
+</div>
